@@ -95,6 +95,7 @@ export const EngineerCalcForm = ({
               <FormControl>
                 <MoneyInput
                   {...field}
+                  autoComplete="off"
                   placeholder="Informe o valor do orçamento"
                 />
               </FormControl>
@@ -111,6 +112,7 @@ export const EngineerCalcForm = ({
               <FormControl>
                 <MoneyInput
                   {...field}
+                  autoComplete="off"
                   placeholder="Informe o valor da proposta"
                 />
               </FormControl>
