@@ -1,17 +1,16 @@
-import type { EngineerCalcSchema } from "@/schemas/engineer"
-import type { UseFormReturn } from "react-hook-form"
+import type { FieldValues, Path, UseFormReturn } from "react-hook-form"
 
-interface ValidateInputMoneyEngineerCalc {
-  form: UseFormReturn<EngineerCalcSchema>
+interface ValidateInputMoneyEngineerCalc<T extends FieldValues> {
+  form: UseFormReturn<T>
   value: number
-  name: "budgetValue" | "proposalValue"
+  name: Path<T>
 }
 
-export const validadeInputMoney = ({
+export const validadeInputMoney = <T extends FieldValues>({
   form,
   value,
   name,
-}: ValidateInputMoneyEngineerCalc) => {
+}: ValidateInputMoneyEngineerCalc<T>) => {
   if (Number.isNaN(value)) {
     form.setError(name, {
       type: "manual",
@@ -23,7 +22,7 @@ export const validadeInputMoney = ({
   if (value < 0) {
     form.setError(name, {
       type: "nonPositiveValue",
-      message: "Insira um valor válido",
+      message: "O valor do campo não pode negativo",
     })
     return false
   }
@@ -31,7 +30,7 @@ export const validadeInputMoney = ({
   if (value === 0) {
     form.setError(name, {
       type: "zeroValue",
-      message: "Insira um valor válido",
+      message: "O valor do campo não pode ser zero",
     })
     return false
   }

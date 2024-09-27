@@ -51,16 +51,25 @@ export const EngineerCalcForm = ({
       proposalValue.replaceAll(".", "").replace(",", ".")
     )
 
-    const isBudgetValueValid = validadeInputMoney({
+    const isBudgetValueValid = validadeInputMoney<EngineerCalcSchema>({
       form,
       value: numBudgetValue,
       name: "budgetValue",
     })
-    const isProposalValueValid = validadeInputMoney({
+    const isProposalValueValid = validadeInputMoney<EngineerCalcSchema>({
       form,
       value: numProposalValue,
       name: "proposalValue",
     })
+
+    if (proposalValue > budgetValue) {
+      form.setError("proposalValue", {
+        type: "proposalValue",
+        message:
+          "O valor da proposta não pode ser maior que o valor do orçamento",
+      })
+      return
+    }
 
     if (!isBudgetValueValid || !isProposalValueValid) {
       return
