@@ -62,7 +62,7 @@ export const EngineerCalcForm = ({
       name: "proposalValue",
     })
 
-    if (proposalValue > budgetValue) {
+    if (numProposalValue > numBudgetValue) {
       form.setError("proposalValue", {
         type: "proposalValue",
         message:
