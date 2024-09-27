@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer>
-      <p className="text-center text-xs text-zinc-500">
+      <p className="text-center text-xs text-zinc-500 pb-4">
         &copy; {new Date().getFullYear()} - Facilitador <br />
         Desenvolvido por{" "}
         <a
