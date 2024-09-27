@@ -1,8 +1,9 @@
 export const Footer = () => {
   return (
     <footer>
-      <p className="text-center text-sm text-zinc-500">
-        &copy; {new Date().getFullYear()} - Facilitador - Desenvolvido por{" "}
+      <p className="text-center text-xs text-zinc-500">
+        &copy; {new Date().getFullYear()} - Facilitador <br />
+        Desenvolvido por{" "}
         <a
           href="https://github.com/kaiandev"
           target="_blank"
