@@ -1,10 +1,5 @@
-import { EngineerCalc } from "@/components/engineer/engineer-calc"
-import { Page } from "./components/template/page"
+import { Router } from "./routes"
 
 export const App = () => {
-  return (
-    <Page>
-      <EngineerCalc />
-    </Page>
-  )
+  return <Router />
 }

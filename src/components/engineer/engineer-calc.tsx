@@ -14,7 +14,7 @@ export const EngineerCalc = () => {
   const handleResultClear = () => setResults(null)
 
   return (
-    <Card className="w-96">
+    <Card className="w-full max-w-96 sm:min-w-96">
       <CardHeader>
         <CardTitle>Cálculo de Engenharia</CardTitle>
       </CardHeader>
