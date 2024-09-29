@@ -9,7 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { HardHatIcon, LeafIcon, MenuIcon } from "lucide-react"
+import { HardHatIcon, MenuIcon } from "lucide-react"
 
 // Utilities
 import { cn } from "@/lib/utils"
