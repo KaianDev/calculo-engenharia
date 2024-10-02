@@ -145,7 +145,12 @@ export const EngineerCalcResults = ({
                 </li>
               </TooltipTrigger>
               <TooltipContent>
-                5% do valor da proposta + garantia adicional.
+                {results.needAdditionalGuarantee && (
+                  <span>5% do valor da proposta + garantia adicional.</span>
+                )}
+                {!results.needAdditionalGuarantee && (
+                  <span>5% do valor da proposta.</span>
+                )}
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

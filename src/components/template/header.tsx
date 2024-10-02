@@ -23,8 +23,8 @@ export const Header = () => {
             <MenuIcon size={24} />
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="space-y-6">
-          <SheetHeader>
+        <SheetContent side="left">
+          <SheetHeader className="pb-6">
             <SheetTitle>Menu</SheetTitle>
           </SheetHeader>
 
