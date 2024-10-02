@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -108,6 +109,9 @@ export const EngineerCalcForm = ({
                   placeholder="Informe o valor do orçamento"
                 />
               </FormControl>
+              <FormDescription className="text-xs">
+                Preencher o campo apenas com números.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -125,6 +129,9 @@ export const EngineerCalcForm = ({
                   placeholder="Informe o valor da proposta"
                 />
               </FormControl>
+              <FormDescription className="text-xs">
+                Preencher o campo apenas com números.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
