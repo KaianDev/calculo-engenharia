@@ -4,6 +4,7 @@ import { CheckCircle2Icon, AlertCircleIcon } from "lucide-react"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -33,6 +34,9 @@ export const EngineerCalcResults = ({
     <Card>
       <CardHeader>
         <CardTitle>Resultado</CardTitle>
+        <CardDescription>
+          Passe o mouse sobre os campos e veja um explicação.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ul className="text-sm">
@@ -125,18 +129,34 @@ export const EngineerCalcResults = ({
               </TooltipContent>
             </Tooltip>
             {results.needAdditionalGuarantee && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <li className="flex justify-between items-center border-b border-border py-2">
-                    <strong>Garantia adicional</strong>
-                    <span>{formatMoney(results.additionalGuarantee)}</span>
-                  </li>
-                </TooltipTrigger>
-                <TooltipContent>
-                  85% do valor do orçamento - valor da proposta.
-                </TooltipContent>
-              </Tooltip>
+              <>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <li className="flex justify-between items-center border-b border-border py-2">
+                      <strong>Garantia adicional</strong>
+                      <span>{formatMoney(results.additionalGuarantee)}</span>
+                    </li>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    85% do valor do orçamento - valor da proposta.
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <li className="flex justify-between items-center border-b border-border py-2">
+                      <strong>5% do valor da proposta</strong>
+                      <span>
+                        {formatMoney(results.fivePercentProposalValue)}
+                      </span>
+                    </li>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <span>5% do valor da proposta</span>
+                  </TooltipContent>
+                </Tooltip>
+              </>
             )}
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <li className="flex justify-between items-center border-b border-border py-2">

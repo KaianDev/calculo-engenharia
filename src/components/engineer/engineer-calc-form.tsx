@@ -79,9 +79,10 @@ export const EngineerCalcForm = ({
     const isUnfeasible = numProposalValue < numBudgetValue * 0.75
     const needAdditionalGuarantee = numProposalValue < numBudgetValue * 0.85
     const additionalGuarantee = numBudgetValue * 0.85 - numProposalValue
+    const fivePercentProposalValue = numProposalValue * 0.05
     const totalInsuranceValue = needAdditionalGuarantee
-      ? additionalGuarantee + numProposalValue * 0.05
-      : numProposalValue * 0.05
+      ? additionalGuarantee + fivePercentProposalValue
+      : fivePercentProposalValue
 
     setResults({
       budgetValue: numBudgetValue,
@@ -89,6 +90,7 @@ export const EngineerCalcForm = ({
       isUnfeasible,
       needAdditionalGuarantee,
       additionalGuarantee,
+      fivePercentProposalValue,
       totalInsuranceValue,
     })
   })

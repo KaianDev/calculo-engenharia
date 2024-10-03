@@ -4,5 +4,6 @@ export interface EngineerResultCalc {
   isUnfeasible: boolean
   needAdditionalGuarantee: boolean
   additionalGuarantee: number
+  fivePercentProposalValue: number
   totalInsuranceValue: number
 }
