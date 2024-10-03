@@ -34,8 +34,8 @@ export const EngineerCalcResults = ({
     <Card>
       <CardHeader>
         <CardTitle>Resultado</CardTitle>
-        <CardDescription>
-          Passe o mouse sobre os campos e veja um explicação.
+        <CardDescription className="text-xs">
+          Passe o mouse sobre os campos e veja uma breve explicação.
         </CardDescription>
       </CardHeader>
       <CardContent>

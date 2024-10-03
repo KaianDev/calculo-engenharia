@@ -16,10 +16,10 @@ import { cn } from "@/lib/utils"
 
 export const Header = () => {
   return (
-    <header className="space-y-4 w-full max-w-96 relative">
+    <header className="space-y-4 w-full max-w-96 md:w-full py-4 flex bg-background justify-between border-b-2 sticky top-0">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="absolute top-0 left-0">
+          <Button variant="ghost" size="icon" className="">
             <MenuIcon size={24} />
           </Button>
         </SheetTrigger>
@@ -57,6 +57,7 @@ export const Header = () => {
         </SheetContent>
       </Sheet>
       <h1 className="text-4xl font-black text-center">Facilitador</h1>
+      <div className="size-10" />
     </header>
   )
 }

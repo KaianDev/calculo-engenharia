@@ -9,9 +9,9 @@ export const Page = ({ children }: PropsWithChildren) => {
   return (
     <div className="min-h-dvh w-full flex flex-col gap-6">
       <div className="flex-1 flex justify-center">
-        <div className="flex items-center flex-col gap-8 px-6 pt-6 w-full sm:w-fit">
+        <div className="flex items-center flex-col gap-8 px-6 w-full sm:w-fit">
           <Header />
-          <main className="w-full flex-1 flex justify-center items-start">
+          <main className="w-full flex-1 flex justify-center items-start pb-6  ">
             {children}
           </main>
           <div className="block lg:hidden">
